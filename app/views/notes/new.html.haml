@@ -2,11 +2,16 @@
   = render 'header', show_btn: :no
   #main_content
     = form_for @note do |f|
-      .field
-        = f.label :title
-        = f.text_field :title
-      .field
-        = f.label :body
-        = f.text_area :body
-      .field
-        = f.submit
+      .note
+        .note_inner
+          .note_top
+            .field
+              = f.label :title
+              = f.text_field :title
+          .note_content
+            .field
+              = f.label :body
+              = f.text_area :body
+          .note_bottom
+            .field
+              .button= f.submit

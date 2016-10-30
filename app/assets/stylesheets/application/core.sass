@@ -140,6 +140,7 @@ body
     font-size: 2rem
 
 .field
+  padding: 10px
   *
     display: block
     + *
@@ -148,6 +149,7 @@ body
     margin-top: 25px
 
 input[type="text"], textarea
+  background-color: rgba(white, 0.5)
   border: 1px solid grey
   border-radius: 2px
   font-family: Georgia
@@ -155,3 +157,13 @@ input[type="text"], textarea
   max-width: 100%
   padding: 5px
   width: 100%
+
+input[type='submit']
+  background: 0
+  border: 0
+  font-family: Georgia
+  font-size: 1rem
+  outline: 0
+
+input[type='submit']:hover
+  text-decoration: underline
