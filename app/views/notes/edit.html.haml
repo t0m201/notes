@@ -1,6 +1,5 @@
 #page
-  %header#header
-    %h2 notes
+  = render 'header', show_btn: :yes
   #main_content
     = form_for @note do |f|
       .field

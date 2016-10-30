@@ -1,0 +1,14 @@
+- until i > @notes.length-1
+  - note = @notes[i]
+  .note
+    .note_inner
+      .note_top
+        %h4= link_to note.title, note
+      .note_destroy
+        = link_to ('x'), note, method: :delete
+      .note_content
+        = note.body
+      .note_bottom
+        %span= note.created_at.to_date
+        %span= link_to ('Edit'), edit_note_path(note)
+  - i += 4

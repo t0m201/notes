@@ -1,18 +1,11 @@
 #page
-  %header#header
-    %h2 notes v0.1 alpha
-    .button
-      = link_to 'New note!', new_note_path
+  = render 'header', show_btn: :yes
   #main_content
-    - @notes.each do |note|
-      .note
-        .note_inner
-          .note_top
-            %h4= note.title
-          .note_destroy
-            = link_to ('x'), note, method: :delete
-          .note_content
-            = note.body
-          .note_bottom
-            %span= note.created_at.to_date
-            %span= link_to ('Edit'), edit_note_path(note)
+    .column{data: 1}
+      = render 'note', i: 0 if @notes.length > 0
+    .column{data: 2}
+      = render 'note', i: 1 if @notes.length > 1
+    .column{data: 3}
+      = render 'note', i: 2 if @notes.length > 2
+    .column{data: 4}
+      = render 'note', i: 3 if @notes.length > 3
