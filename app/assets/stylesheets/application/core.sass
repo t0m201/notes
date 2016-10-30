@@ -1,0 +1,140 @@
+*
+  box-sizing: border-box
+body
+  font-family: Verdana, Sans-Serif
+  font-size: 87.5%
+  -webkit-font-smoothing: antialiased
+  margin: 0
+a
+  color: $primary_text_color
+  text-decoration: none
+  a:hover
+    text-decoration: underline
+img
+  max-width: 100%
+
+h1, h2, h3, h4, h5, h6, p, li
+  color: $primary_text_color
+  font-family: Georgia
+  font-weight: normal
+  margin: 0
+
+p, a
+  font-family: Verdana
+  font-size: 1rem
+  line-height: 1.5rem
+
+h1
+  font-size: 3rem
+
+h2
+  font-size: 2rem
+
+h3
+  font-size: 1.75rem
+
+.hidden
+  display: none
+
+/* site wide */
+body
+  background: #ddeaff
+
+#page_wrapper
+
+#page
+  border: 1px solid grey
+  border-top: 0
+  border-bottom: 0
+  margin: 0 auto
+  max-width: $site-width
+
+#header
+  display: flex
+  justify-content: space-between
+  background-color: white
+  border-bottom: 1px solid rgba(grey, 0.1)
+  padding: 10px 50px
+
+#main_content
+  background: white
+  font-size: 0
+  height: 100%
+  padding: 50px
+  padding-top: 25px
+  padding-right: 25px
+
+.button
+  background-color: rgba(grey, 0.25)
+  border-radius: 10px
+  border-bottom: 2px solid grey
+  padding: 10px 25px
+  a:hover
+    text-decoration: underline
+    cursor: pointer
+
+.note
+  display: inline-block
+  font-size: 1rem
+  width: 20%
+  padding-top: 25px
+  padding-right: 25px
+
+.note_inner
+  background-color: #fff5aa
+  position: relative
+
+.note_top
+  padding: 10px
+  overflow: hidden
+  h4
+    font-size: 2rem
+
+.note_destroy
+  padding: 5px 9px
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 2
+  a
+    font-size: 0.75rem
+    color: darken(#fff5aa, 45)
+
+.note_content
+  padding: 10px
+  overflow: hidden
+  font-family: Georgia
+
+.note_bottom
+  background-color: rgba(white, 0.3)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-top: 1px solid darken(#fff5aa, 5)
+  padding: 5px 10px
+  a, span
+    font-size: 0.75rem
+    color: darken(#fff5aa, 45)
+
+#main_content form
+  font-size: 1rem
+  font-family: Georgia
+  h4
+    font-size: 2rem
+
+.field
+  *
+    display: block
+    + *
+      margin-top: 5px
+  + .field
+    margin-top: 25px
+
+input[type="text"], textarea
+  border: 1px solid grey
+  border-radius: 2px
+  font-family: Georgia
+  font-size: 1rem
+  max-width: 100%
+  padding: 5px
+  width: 100%

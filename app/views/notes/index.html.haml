@@ -1,0 +1,18 @@
+#page
+  %header#header
+    %h2 notes
+    .button
+      = link_to 'New note!', new_note_path
+  #main_content
+    - @notes.each do |note|
+      .note
+        .note_inner
+          .note_top
+            %h4= note.title
+          .note_destroy
+            = link_to ('x'), note, method: :delete
+          .note_content
+            = note.body
+          .note_bottom
+            %span= note.created_at.to_date
+            %span= link_to ('Edit'), edit_note_path(note)
