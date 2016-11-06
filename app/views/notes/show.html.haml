@@ -1,14 +1,13 @@
-#page
-  = render 'header', show_btn: :yes
-  #main_content
-    .note.big
-      .note_inner
-        .note_top
-          %h4= @note.title
-        .note_destroy
-          = link_to ('x'), @note, method: :delete
-        .note_content
-          = @note.body
-        .note_bottom
-          %span= @note.created_at.to_date
-          %span= link_to ('Edit'), edit_note_path(@note)
+= render 'layouts/header', show_btn: :yes
+#main_content
+  .note.big
+    .note_inner
+      .note_top
+        %h4= @note.title
+      .note_destroy
+        = link_to ('x'), @note, method: :delete
+      .note_content
+        = @note.body
+      .note_bottom
+        %span= @note.created_at.to_date
+        %span= link_to ('Edit'), edit_note_path(@note)

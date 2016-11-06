@@ -1,0 +1,49 @@
+.note
+  display: block
+  font-size: 1rem
+  padding-top: 25px
+  padding-right: 25px
+  &.big
+    width: 100%
+
+.note_inner
+  background-color: #fff5aa
+  position: relative
+
+.note_top
+  background-color: rgba(#fff5aa, 0.1)
+  overflow: hidden
+  padding: 10px
+  word-wrap: break-word
+  h4
+    font-size: 2rem
+    a
+      font-size: 2rem
+    a:hover
+      text-decoration: underline
+
+.note_destroy
+  padding: 5px 9px
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 2
+  a
+    font-size: 0.75rem
+    color: darken(#fff5aa, 45)
+
+.note_content
+  padding: 10px
+  overflow: hidden
+  font-family: Georgia
+
+.note_bottom
+  background-color: rgba(white, 0.3)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-top: 1px solid darken(#fff5aa, 5)
+  padding: 5px 10px
+  a, span
+    font-size: 0.75rem
+    color: darken(#fff5aa, 45)

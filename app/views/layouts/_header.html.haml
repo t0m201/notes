@@ -1,0 +1,15 @@
+%header#header
+  %h2#page_title= link_to 'notes v0.2', notes_path
+  #user_controls
+    - if user_signed_in?
+      Logged in as
+      = succeed "." do
+        %strong= current_user.email
+      = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
+      = link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
+      - unless show_btn == :no
+        .button
+          = link_to 'New note!', new_note_path
+    - else
+      = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
+      = link_to "Login", new_user_session_path, :class => 'navbar-link'

@@ -1,11 +1,10 @@
-#page
-  = render 'header', show_btn: :yes
-  #main_content
-    .column{data: 1}
-      = render 'note', i: 0 if @notes.length > 0
-    .column{data: 2}
-      = render 'note', i: 1 if @notes.length > 1
-    .column{data: 3}
-      = render 'note', i: 2 if @notes.length > 2
-    .column{data: 4}
-      = render 'note', i: 3 if @notes.length > 3
+= render 'layouts/header', show_btn: :yes
+#main_content
+  .column{data: 1}
+    = render 'note', i: 0 if @notes.length > 0
+  .column{data: 2}
+    = render 'note', i: 1 if @notes.length > 1
+  .column{data: 3}
+    = render 'note', i: 2 if @notes.length > 2
+  .column{data: 4}
+    = render 'note', i: 3 if @notes.length > 3
