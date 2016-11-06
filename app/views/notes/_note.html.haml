@@ -5,10 +5,10 @@
       .note_top
         %h4= link_to note.title, note
       .note_destroy
-        = link_to ('x'), note, method: :delete
+        = link_to ('x'), note, method: :delete if user_signed_in?
       .note_content
         = note.body
       .note_bottom
         %span= note.created_at.to_date
-        %span= link_to ('Edit'), edit_note_path(note)
+        %span= link_to ('Edit'), edit_note_path(note) if user_signed_in?
   - i += 4
